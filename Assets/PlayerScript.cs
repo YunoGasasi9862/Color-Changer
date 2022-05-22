@@ -10,7 +10,7 @@ public class PlayerScript : MonoBehaviour
     public Color Yellow;
     public Color Blue;
     public Color Purple;
-    public Color pink;
+    public Color Pink;
     public float speed;
     private GameManager gameManager;
     private void Awake()
@@ -34,7 +34,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag!=color && collision.tag!="colorchanger")
+        if (collision.tag != color && collision.tag != "colorchanger")
         {
             gameManager.GameOver();
         }
@@ -56,8 +56,8 @@ public class PlayerScript : MonoBehaviour
                 color = "Blue";
                 break;
             case 2:
-                sr.color = pink;
-                color = "pink";
+                sr.color = Pink;
+                color = "Pink";
                 break;
             case 3:
                 sr.color = Purple;

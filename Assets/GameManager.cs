@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private bool isOver=false;
+   
     public  void GameOver()
     {
         while(!isOver)
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);        
 
     }
 }
