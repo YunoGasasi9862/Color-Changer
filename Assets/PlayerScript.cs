@@ -34,11 +34,20 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != color && collision.tag != "colorchanger")
+        if (collision.tag != color && collision.tag != "ColorChanger")
         {
             gameManager.GameOver();
         }
+
+
+        if(collision.tag== "ColorChanger")
+        {
+            ColorChanger();
+            Destroy(GameObject.FindWithTag("ColorChanger"));  //destroys
+        }
     }
+
+    
 
 
     void ColorChanger()
