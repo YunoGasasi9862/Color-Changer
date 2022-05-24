@@ -23,12 +23,18 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         ColorChanger();
+        rb.bodyType = RigidbodyType2D.Kinematic;
     }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
         {
             rb.velocity = Vector2.up * speed;
+
+
+            rb.bodyType = RigidbodyType2D.Dynamic;  //this is the change
+
+
         }
     }
 
