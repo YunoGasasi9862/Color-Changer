@@ -3,22 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class OnclickFunction : MonoBehaviour
 {
-    private void Update()
+    private Button inbounds;
+    private void Start()
     {
-        OnClickRestart();
+        inbounds = GetComponentInParent<Button>();
     }
 
 
+  
+    public void Click()
+    {
+
+        inbounds.onClick.AddListener(OnClickRestart); //adds the listener on the mouse click on theb utton
+        //takes in fucntion
+    }
 
     public void OnClickRestart()
     {
-        if (Input.GetMouseButton(0))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1) ;
+       
+       
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1) ;
 
-        }
+        
 
     }
 }
