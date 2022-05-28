@@ -17,7 +17,7 @@ public class OnclickFunction : MonoBehaviour
     public void Click()
     {
 
-        inbounds.onClick.AddListener(OnClickRestart); //adds the listener on the mouse click on theb utton
+      //not needed thought//  inbounds.onClick.AddListener(OnClickRestart); //adds the listener on the mouse click on theb utton
         //takes in fucntion
     }
 
