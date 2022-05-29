@@ -36,6 +36,25 @@ public class PlayerScript : MonoBehaviour
 
 
         }
+
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if(speed<=8)
+            {
+
+                speed += 1;
+            }
+         
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if(speed>5)
+            {
+                speed -= 1;
+            }
+
+           
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,6 +62,7 @@ public class PlayerScript : MonoBehaviour
         if (collision.tag != color && collision.tag != "ColorChanger")
         {
             gameManager.GameOver();
+            speed = 5;
         }
 
 
