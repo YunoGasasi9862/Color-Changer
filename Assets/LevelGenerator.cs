@@ -17,11 +17,17 @@ public class LevelGenerator : MonoBehaviour
         for(int i=0; i<maxNumberofRotators; i++)
         {
 
-            float newSpeed = Random.Range(minSpeed, maxSpeed);  //i assigned that new speed to rotator speed complonent :))
-            Rotator.GetComponent<Rotator>().speed = newSpeed; //this sets the new speed for the rotator
-            position.y = Height; //at every 15
+            //float newSpeed = Random.Range(minSpeed, maxSpeed);  //i assigned that new speed to rotator speed complonent :))
+            //Rotator.GetComponent<Rotator>().speed = newSpeed; //this sets the new speed for the rotator
+            //position.y = Height; //at every 15
+            //Instantiate(Rotator, position, Quaternion.identity);
+            //Height += 10; //increment
+
+            float newspeed = Random.Range(minSpeed, maxSpeed);
+            Rotator.GetComponent<Rotator>().speed= newspeed;
+            position.y = Height;
             Instantiate(Rotator, position, Quaternion.identity);
-            Height += 10; //increment
+            Height += 10;
 
         }
     }
