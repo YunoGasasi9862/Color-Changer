@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Exit : MonoBehaviour
 {
-    void Update()
+    public void Quit()
     {
         Application.Quit(); //exits the window
     }
+
+
 }
