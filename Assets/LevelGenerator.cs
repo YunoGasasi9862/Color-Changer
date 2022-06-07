@@ -41,8 +41,8 @@ public class LevelGenerator : MonoBehaviour
             //Instantiate(Rotator, position, Quaternion.identity);
             //Height += 10; //increment
 
-            float newspeed = Random.Range(minSpeed, maxSpeed);
-            Rotator.GetComponent<Rotator>().speed= newspeed;
+          float newspeed= Random.Range(minSpeed,maxSpeed);
+            Rotator.GetComponent<Rotator>().speed = newspeed;
             position.y = Height;
             Instantiate(Rotator, position, Quaternion.identity);
             Height += 10;
