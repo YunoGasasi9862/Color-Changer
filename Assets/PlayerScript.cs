@@ -31,7 +31,6 @@ public class PlayerScript : MonoBehaviour
         {
             rb.velocity = Vector2.up * speed;
 
-
             rb.bodyType = RigidbodyType2D.Dynamic;  //this is the change
 
 

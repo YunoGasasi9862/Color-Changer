@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class LevelGenerator : MonoBehaviour
 {
     public GameObject Rotator;
-    float maxSpeed=500;
-    float minSpeed=200;
+    float maxSpeed=250;
+    float minSpeed=-200;
     int maxNumberofRotators;
     float Height=2;
 
